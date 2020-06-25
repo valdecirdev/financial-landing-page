@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Webpixels">
+    <title>Sistema de gestão online: controle sua empresa com Financial BM</title>
+    <!-- Preloader -->
+    <style>
+        @keyframes hidePreloader {
+            0% {
+                width: 100%;
+                height: 100%;
+            }
+
+            100% {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        body>div.preloader {
+            position: fixed;
+            background: white;
+            width: 100%;
+            height: 100%;
+            z-index: 1071;
+            opacity: 0;
+            transition: opacity .5s ease;
+            overflow: hidden;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body:not(.loaded)>div.preloader {
+            opacity: 1;
+        }
+
+        body:not(.loaded) {
+            overflow: hidden;
+        }
+
+        body.loaded>div.preloader {
+            animation: hidePreloader .5s linear .5s forwards;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                document.querySelector('body').classList.add('loaded');
+            }, 300);
+        });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/png"><!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Quick CSS -->
+    <link rel="stylesheet" href="assets/css/quick-website.css" id="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal-cookies" data-backdrop="false" aria-labelledby="modal-cookies" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-aside left-4 right-4 bottom-4">
+            <div class="modal-content bg-dark-dark">
+                <div class="modal-body">
+                    <!-- Text -->
+                    <p class="text-sm text-white mb-3">
+                        We use cookies so that our themes work for you. By using our website, you agree to our use of cookies.
+                    </p>
+                    <!-- Buttons -->
+                    <a href="pages/utility/terms.html" class="btn btn-sm btn-white" target="_blank">Learn more</a>
+                    <button type="button" class="btn btn-sm btn-primary mr-2" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Go Pro -->
+    <a href="#" class="btn btn-block btn-dark text-truncate rounded-0 py-2 d-none d-lg-block" style="z-index: 1000;" target="_blank">
+        <strong>30 dias grátis.</strong> Teste e comprove, sem necessidade de cartão de crédito →
+    </a>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+                <img alt="Image placeholder" src="assets/img/brand/logo_3.png" id="navbar-logo" style="width: 260px; height: auto;">
+            </a>
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mt-4 mt-lg-0 ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="docs/index.html">Ajuda</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
+                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                        <div class="dropdown-menu dropdown-menu-single">
+                            <a href="index.html" class="dropdown-item">Homepage</a>
+                            <a href="about.html" class="dropdown-item">About us</a>
+                            <a href="contact.html" class="dropdown-item">Contact</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="login.html" class="dropdown-item">Login</a>
+                        </div>
+                    </li> -->
+                </ul>
+                <!-- Button -->
+                <a class="navbar-btn btn btn-sm btn-primary d-none d-lg-inline-block ml-3" href="#">
+                    Experimente grátis
+                </a>
+                <!-- Button -->
+                <a class="navbar-btn btn btn-sm btn-secondary d-none d-lg-inline-block ml-3" href="#">
+                    Entrar
+                </a>
+                <!-- Mobile button -->
+                <div class="d-lg-none text-center">
+                    <a href="#" class="btn btn-block btn-sm btn-primary">Experimente grátis</a>
+                </div>
+                <!-- Mobile Button -->
+                <div class="d-lg-none mt-2 text-center">
+                    <a href="#" class="btn btn-block btn-sm btn-secondary">Entrar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <section class="slice py-2">
+        <div class="container">
+            <div class="row row-grid align-items-center">
+                <div class="col-12 col-md-5 col-lg-6 order-md-2 text-center">
+                    <!-- Image -->
+                    <figure class="w-100">
+                        <img alt="Image placeholder" src="assets/img/svg/illustrations/illustration-3.svg" class="img-fluid mw-md-120">
+                    </figure>
+                </div>
+                <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
+                    <!-- Heading -->
+                    <h1 class="display-4 text-center text-md-left mb-3">
+                        Controle da sua <strong class="text-primary">empresa</strong>
+                    </h1>
+                    <!-- Text -->
+                    <p class="lead text-center text-md-left text-muted">
+                        Trabalhe de onde estiver, com fluxo de caixas, relatórios financeiros, controle de vendas, controle de estoque, contas a pagar e a receber.
+                    </p>
+                    <!-- Buttons -->
+                    <div class="text-center text-md-left mt-5">
+                        <a href="#" class="btn btn-primary btn-icon" target="_blank">
+                            <span class="btn-inner--text">Experimente grátis</span>
+                            <span class="btn-inner--icon"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <!-- <a href="https://webpixels.io/illustrations" class="btn btn-neutral btn-icon d-none d-lg-inline-block" target="_blank">See Illustrations</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg pt-lg-6 pb-0 pb-lg-6 bg-section-secondary">
+        <div class="container">
+            <!-- Title -->
+            <!-- Section title -->
+            <div class="row mb-5 justify-content-center text-center">
+                <div class="col-lg-6">
+                    <span class="badge badge-soft-success badge-pill badge-lg">
+                        Vamos lá
+                    </span>
+                    <h2 class=" mt-4">Uma plataforma completa aliada ao seu negócio</h2>
+                    <div class="mt-2">
+                        <p class="lead lh-180">Sistema projetado para fornecer um controle completo de todos os setores da sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card -->
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_data_trends_b0wg.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Monitoramento</h5>
+                            <p class="text-muted mb-0">Central de monitoramento completo que centraliza e organiza as informações mais cruciais para o dia-a-dia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_make_it_rain_iwk4.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Contas a pagar e a receber</h5>
+                            <p class="text-muted mb-0">Mantenha as contas a pagar e a receber sempre atualizadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_visual_data_b1wx.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Fluxo de caixa</h5>
+                            <p class="text-muted mb-0">Conheça as movimentações de entradas e saídas, geração de caixa e o saldo disponível.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_empty_cart_co35.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Controle de vendas</h5>
+                            <p class="text-muted mb-0">Todas as suas vendas integradas com faturamento, cobrança e estoque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_logistics_x4dc.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Controle de estoque</h5>
+                            <p class="text-muted mb-0">Gerenciando seus produtos, estoque, listas de preços e margens de lucro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_vault_9cmw.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Gestão bancária</h5>
+                            <p class="text-muted mb-0">Controle de lançamentos e transações entre suas contas financeiras.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_agreement_aajr.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Integração operacional</h5>
+                            <p class="text-muted mb-0">Todas as áreas da sua empresa trabalhando em conjunto de forma integrada e organizada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_add_file2_gvbb.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Upload de Arquivos</h5>
+                            <p class="text-muted mb-0">Mantenha comprovantes, notas fiscais e outros documentos seguros, organizados e sempre acessíveis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body pb-5 text-center">
+                            <div class="pt-4 pb-5">
+                                <img src="assets/img/svg/undraw_safe_bnk7.svg" class="img-fluid img-center" style="height: 150px;" alt="Illustration" />
+                            </div>
+                            <h5 class="h4 lh-130 mb-3">Registro de Transações</h5>
+                            <p class="text-muted mb-0">Todas as transações são documentadas em um registro permanente, garantindo a rastreabilidade dos dados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg">
+        <div class="container">
+            <div class="py-2">
+                <div class="row row-grid justify-content-between align-items-center">
+                    <div class="col-lg-5 order-lg-2">
+                        <h5 class="h3">Assuma definitivamente o controle gerencial, fiscal e financeiro da sua empresa</h5>
+                        <p class="lead my-4">
+                            Com o Financial BM você realiza toda a gestão de seu negócio com um único sistema de controle financeiro:
+                        </p>
+                        <ul>
+                            <li>Contas a pagar e a receber;</li>
+                            <li>Gestão bancária;</li>
+                            <li>Fluxo de caixa atualizado;</li>
+                            <li>Controle de vnedas e estoque;</li>
+                            <li>Registro de transações;</li>
+                            <li>E muito mais.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="card mb-0 mr-lg-5">
+                            <div class="card-body p-2">
+                                <img alt="Image placeholder" src="assets/img/theme/light/screen-1-1000x800.jpg" class="img-fluid shadow rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slice slice-lg bg-section-secondary">
+        <div class="container text-center">
+            <div class="row justify-content-center mb-6">
+                <div class="col-lg-8">
+                    <!-- Title -->
+                    <h2 class="h1 strong-600">
+                        Planos sob medida para seu sucesso!
+                    </h2>
+                    <!-- Text -->
+                    <p class="text-muted">
+                        Thousands of developers around the world have already made Quick the main tool for building websites.
+                    </p>
+                </div>
+            </div>
+            <!-- Pricing -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md">
+                    <div class="card card-pricing text-center px-3 hover-scale-110">
+                        <div class="card-header py-5 border-0 delimiter-bottom">
+                            <div class="h1 text-center mb-0">
+                                R$ <span class="price font-weight-bolder">99,90</span><span class="h6 text-muted">/mês</span>
+                            </div>
+                            <span class="h6 text-muted">MEI</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled text-sm mb-4">
+                                <li class="py-2">1 usuário</li>
+                                <li class="py-2">até 20 Contas a Pagar</li>
+                                <li class="py-2">até 20 Contas a Receber</li>
+                                <li class="py-2">Suporte Gratuito</li>
+                            </ul>
+                            <a href="#" class="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3">Experimente grátis</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md">
+                    <div class="card card-pricing bg-dark text-center px-3 border-0 hover-scale-110">
+                        <div class="card-header py-5 border-0 delimiter-bottom">
+                            <div class="h1 text-white text-center mb-0">
+                                R$ <span class="price font-weight-bolder">179,90</span><span class="h6 text-muted">/mês</span>
+                            </div>
+                            <span class="h6 text-white">Startup</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled text-white text-sm opacity-8 mb-4">
+                                <li class="py-2">até 5 usuários</li>
+                                <li class="py-2">até 100 Contas a Pagar</li>
+                                <li class="py-2">até 100 Contas a Receber</li>
+                                <!-- <li class="py-2">Use in an end product that is <strong class="text-success text-underline--dashed">sold</strong></li> -->
+                                <li class="py-2">Suporte Gratuito</li>
+                            </ul>
+                            <a href="#" class="btn btn-sm btn-white hover-translate-y-n3 hover-shadow-lg mb-3">Experimente grátis</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md">
+                    <div class="card card-pricing text-center px-3 hover-scale-110">
+                        <div class="card-header py-5 border-0 delimiter-bottom">
+                            <div class="h1 text-center mb-0">
+                                R$ <span class="price font-weight-bolder">249,90</span><span class="h6 text-muted">/mês</span>
+                            </div>
+                            <span class="h6 text-muted">Empresarial</span>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled text-sm mb-4">
+                                <li class="py-2">até 20 Usuários</li>
+                                <li class="py-2">Contas a Pagar Ilimitadas</li>
+                                <li class="py-2">Contas a Receber Ilimitadas</li>
+                                <li class="py-2">Suporte Gratuito</li>
+                            </ul>
+                            <a href="#" class="btn btn-sm btn-warning hover-translate-y-n3 hover-shadow-lg mb-3">Experimente grátis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 text-center">
+                <p class="mb-2">
+                    Todos os planos contam com 30 dias gratuitos e suporte.
+                </p>
+                <!-- <a href="#" class="text-primary text-underline--dashed">Contact us<i data-feather="arrow-right" class="ml-2"></i></a> -->
+            </div>
+        </div>
+    </section>
+    <footer class="position-relative" id="footer-main">
+        <div class="footer pt-lg-7 footer-dark bg-dark">
+            <!-- SVG shape -->
+            <div class="shape-container shape-line shape-position-top shape-orientation-inverse">
+                <svg width="2560px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100;" xml:space="preserve" class=" fill-section-secondary">
+                    <polygon points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+            <!-- Footer -->
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <!-- Theme's logo -->
+                        <a href="index.html">
+                            <img alt="Image placeholder" src="assets/img/brand/logo_2.png" id="footer-logo">
+                        </a>
+                        <!-- Webpixels' mission -->
+                        <p class="mt-4 text-sm opacity-8 pr-lg-4">Webpixels attempts to bring the best development experience to designers and developers by offering the tools needed for having a quick and solid start in most web projects.</p>
+                        <!-- Social -->
+                        <!-- <ul class="nav mt-4">
+                            <li class="nav-item">
+                                <a class="nav-link pl-0" href="https://dribbble.com/webpixels" target="_blank">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/webpixels" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.instagram.com/webpxs" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/webpixels" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0">
+                        <h6 class="heading mb-3">Account</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Billing</a></li>
+                            <li><a href="#">Notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                        <h6 class="heading mb-3">About</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                        <h6 class="heading mb-3">Company</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Help center</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="divider divider-fade divider-dark my-4">
+                <div class="row align-items-center justify-content-md-between pb-4">
+                    <div class="col-md-6">
+                        <div class="copyright text-sm font-weight-bold text-center text-md-left">
+                            &copy; 2020 <a href="#" class="font-weight-bold" target="_blank">Financial BM</a>. Todos os direitos reservados
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Termos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Privacidade
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Cookies
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Core JS  -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/svg-injector/dist/svg-injector.min.js"></script>
+    <script src="assets/libs/feather-icons/dist/feather.min.js"></script>
+    <!-- Quick JS -->
+    <script src="assets/js/quick-website.js"></script>
+    <!-- Feather Icons -->
+    <script>
+        feather.replace({
+            'width': '1em',
+            'height': '1em'
+        })
+    </script>
+</body>
+
+</html>
